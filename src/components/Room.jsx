@@ -14,9 +14,10 @@ const Room = (props) => {
     let total = props.price * amountOfDays
     // console.log(total)
     // alert(`Booking Price: $${total}`)
-    document.getElementById(
-      "booking-cost"
-    ).innerHTML = `<p style='color: green;'>Total cost for ${amountOfDays} days is: <span style=' font-weight: bold'>$${total}</span></p>`
+    // document.getElementById(
+    //   "booking-cost"
+    // ).innerHTML = `<p style='color: green;'>Total cost for ${amountOfDays} days is: <span style=' font-weight: bold'>$${total}</span></p>`
+    alert(`Total cost for ${amountOfDays} days is: $${total}`)
   }
 
   const availableBookForm = (
@@ -32,7 +33,7 @@ const Room = (props) => {
       <br />
       <br />
       <button onClick={handleBook}>Book Now</button>
-      <p id="booking-cost"></p>
+      {/* <p id="booking-cost"></p> */}
     </form>
   )
 
