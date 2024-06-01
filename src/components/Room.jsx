@@ -1,11 +1,12 @@
 import React from "react"
 
 // using props from Rooms obj
-const Room = ({ beds, price }) => {
+const Room = ({ id, name, beds, price }) => {
   return (
-    <div>
-      <p>{beds}</p>
-      <p>{price}</p>
+    <div className="room">
+      <h2>{name}</h2>
+      <p>Beds: {beds}</p>
+      <p>Rate: ${price}/night</p>
     </div>
   )
 }
