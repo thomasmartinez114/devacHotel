@@ -2,14 +2,22 @@ import React from "react"
 
 // using props from Rooms obj
 const Room = ({ id, type, price, available }) => {
-  const handleBook = () => {
-    console.log("Room Booked")
+  // handleBook
+  const handleBook = (event) => {
+    event.preventDefault()
+    // console.log("Room Booked")
+    let amountofDays = document.getElementById("days").value
+    let total = price * amountofDays
+    // console.log(total)
+    alert(`Booking Price: $${total}`)
   }
 
   const availableBookForm = (
     <form>
       <label>Booking Days </label>
-      <input type="text" id="days" />
+      <input type="number" id="days" /> <br />
+      <br />
+      <button onClick={handleBook}>Book Now</button>
     </form>
   )
 
