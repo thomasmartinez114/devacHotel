@@ -7,21 +7,24 @@ const App = () => {
   const [rooms, setRooms] = useState([
     {
       id: 1,
-      name: "Single Bed",
+      name: "Providence",
       beds: 1,
       price: 100,
+      available: 1,
     },
     {
       id: 2,
-      name: "Double Bed",
+      name: "Warwick",
       beds: 2,
       price: 200,
+      available: 1,
     },
     {
       id: 3,
-      name: "Suite",
+      name: "East Greenwich",
       beds: 1,
       price: 500,
+      available: 0,
     },
   ])
 
@@ -37,6 +40,7 @@ const App = () => {
               name={room.name}
               beds={room.beds}
               price={room.price}
+              available={room.available}
             />
           )
         })}
