@@ -4,7 +4,7 @@ import Room from "./components/Room"
 
 const App = () => {
   // hotel obj with rooms
-  const [rooms, setRooms] = useState([
+  const rooms = [
     {
       id: 1,
       type: "Single Bed",
@@ -23,11 +23,11 @@ const App = () => {
       price: 500,
       available: 0,
     },
-  ])
+  ]
 
   return (
     <div>
-      <h1>Devacc Hotel</h1>
+      <h1>Devac Hotel</h1>
       <div className="room-list">
         {/* map through obj and render props within Room component */}
         {rooms.map((room) => {
