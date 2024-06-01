@@ -2,6 +2,10 @@ import React from "react"
 
 // using props from Rooms obj
 const Room = ({ id, name, beds, price, available }) => {
+  const handleBook = () => {
+    console.log("Room Booked")
+  }
+
   return (
     <>
       <hr></hr>
@@ -11,7 +15,7 @@ const Room = ({ id, name, beds, price, available }) => {
         <p>Rate: ${price}/night</p>
         <b>
           {available ? (
-            <button>Book Now</button>
+            <button onClick={handleBook}>Book Now</button>
           ) : (
             <p style={{ color: "red" }}>Not Available</p>
           )}
