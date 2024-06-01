@@ -12,7 +12,7 @@ const Room = ({ id, type, price, available }) => {
     // alert(`Booking Price: $${total}`)
     document.getElementById(
       "booking-cost"
-    ).innerHTML = `<p style='color: green; font-weight: bold'>Total cost for ${amountofDays} days is: ${total}</p>`
+    ).innerHTML = `<p style='color: green;'>Total cost for ${amountofDays} days is: <span style=' font-weight: bold'>$${total}</span></p>`
   }
 
   const availableBookForm = (
