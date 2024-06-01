@@ -24,7 +24,9 @@ const App = () => {
 
   return (
     <div>
-      <div>
+      <h3>Devacc Hotel</h3>
+      <div className="room-list">
+        {/* map through obj and render props within Room component */}
         {rooms.map((room) => {
           return <Room key={room.id} beds={room.beds} price={room.price} />
         })}

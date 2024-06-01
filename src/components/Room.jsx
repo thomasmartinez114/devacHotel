@@ -1,5 +1,6 @@
 import React from "react"
 
+// using props from Rooms obj
 const Room = ({ beds, price }) => {
   return (
     <div>
