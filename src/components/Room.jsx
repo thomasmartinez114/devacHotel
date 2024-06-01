@@ -14,6 +14,8 @@ const Room = (props) => {
     let total = props.price * amountOfDays
     // console.log(total)
     // alert(`Booking Price: $${total}`)
+
+    // update p tag when book pressed
     // document.getElementById(
     //   "booking-cost"
     // ).innerHTML = `<p style='color: green;'>Total cost for ${amountOfDays} days is: <span style=' font-weight: bold'>$${total}</span></p>`
