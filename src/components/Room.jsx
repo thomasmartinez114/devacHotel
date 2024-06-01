@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from "react"
 
 // using props from Rooms obj
-const Room = ({ id, type, price, available }) => {
+const Room = (props) => {
   // useState to set amountDays inputted by user
   const [amountOfDays, setAmountOfDays] = useState()
 
@@ -11,7 +11,7 @@ const Room = ({ id, type, price, available }) => {
     event.preventDefault()
     // console.log("Room Booked")
     // let amountofDays = document.getElementById("days").value
-    let total = price * amountOfDays
+    let total = props.price * amountOfDays
     // console.log(total)
     // alert(`Booking Price: $${total}`)
     document.getElementById(
@@ -40,9 +40,9 @@ const Room = ({ id, type, price, available }) => {
     <>
       <hr></hr>
       <div className="room">
-        <p className="room-type">{type}</p>
-        <p>Rate: ${price}/night</p>
-        {available ? (
+        <p className="room-type">{props.type}</p>
+        <p>Rate: ${props.price}/night</p>
+        {props.available ? (
           availableBookForm
         ) : (
           <p style={{ color: "red" }}>Not Available</p>

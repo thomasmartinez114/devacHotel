@@ -32,12 +32,14 @@ const App = () => {
         {/* map through obj and render props within Room component */}
         {rooms.map((room) => {
           return (
-            <Room
-              key={room.id}
-              type={room.type}
-              price={room.price}
-              available={room.available}
-            />
+            <>
+              <Room
+                key={room.id}
+                type={room.type}
+                price={room.price}
+                available={room.available}
+              />
+            </>
           )
         })}
       </div>
