@@ -7,22 +7,19 @@ const App = () => {
   const [rooms, setRooms] = useState([
     {
       id: 1,
-      name: "Providence",
-      beds: 1,
+      type: "Single Bed",
       price: 100,
       available: 1,
     },
     {
       id: 2,
-      name: "Warwick",
-      beds: 2,
+      type: "Double Bed",
       price: 200,
       available: 1,
     },
     {
       id: 3,
-      name: "East Greenwich",
-      beds: 1,
+      type: "Suite",
       price: 500,
       available: 0,
     },
@@ -37,8 +34,7 @@ const App = () => {
           return (
             <Room
               key={room.id}
-              name={room.name}
-              beds={room.beds}
+              type={room.type}
               price={room.price}
               available={room.available}
             />
