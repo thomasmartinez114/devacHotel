@@ -6,14 +6,14 @@ const Room = ({ id, type, price, available }) => {
   const handleBook = (e) => {
     e.preventDefault()
     console.log("Room Booked")
-    // let total = price * amountOfDays
+    // let total = price * selectedDay
     // console.log(total)
     // alert(`Booking Price: $${total}`)
     // update p tag when book pressed
     // document.getElementById(
     //   "booking-cost"
     // ).innerHTML = `<p style='color: green;'>Total cost for ${amountOfDays} days is: <span style=' font-weight: bold'>$${total}</span></p>`
-    // alert(`Total cost for ${amountOfDays} days is: $${total}`)
+    // alert(`Total cost for ${selectedDay} days is: $${total}`)
   }
 
   // const availableBookForm = (
