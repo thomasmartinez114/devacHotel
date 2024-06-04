@@ -41,19 +41,20 @@ const RoomsList = () => {
   const handleBook = (price, type) => {
     // e.preventDefault()
     console.log("Room Booked")
-    console.log(price)
+    console.log(`Room price: ${price}`)
     let total = price * selectedDay
     // console.log(`Total for booking room: ${type} is $${total}`)
     // alert(`Booking Price: $${total}`)
     // update p tag when book pressed
-    // document.getElementById(
-    //   "booking-cost"
-    // ).innerHTML = `<p style='color: green;'>Total cost for ${amountOfDays} days is: <span style=' font-weight: bold'>$${total}</span></p>`
-    alert(`Total for booking ${type} for ${selectedDay} day(s) is $${total}`)
+    document.getElementById(
+      "booking-cost"
+    ).innerHTML = `<p style='color: green;'>Total for booking <span style='font-weight: bold'>${type}</span> for ${selectedDay} day(s) is: <span style=' font-weight: bold'>$${total}</span></p>`
+    // alert(`Total for booking ${type} for ${selectedDay} day(s) is $${total}`)
   }
 
   return (
     <>
+      <p id="booking-cost"></p>
       <form>
         <label htmlFor="days">Select Days: </label>
         <select
