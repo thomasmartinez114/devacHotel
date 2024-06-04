@@ -1,8 +1,14 @@
 import React from "react"
 import Room from "./Room"
+import DaysSelector from "./DaysSelector"
 import { useState } from "react"
 
 const RoomsList = () => {
+  // Initialize the state to hold the selected value
+  const [selectedDay, setSelectedDay] = useState("1")
+
+  // console.log(selectedDay * 5)
+
   // hotel obj with rooms
   const rooms = [
     {
@@ -26,21 +32,24 @@ const RoomsList = () => {
   ]
 
   return (
-    <div className="room-list">
-      {/* map through obj and render props within Room component */}
-      {rooms.map((room) => {
-        return (
-          <>
-            <Room
-              key={room.id}
-              type={room.type}
-              price={room.price}
-              available={room.available}
-            />
-          </>
-        )
-      })}
-    </div>
+    <>
+      <DaysSelector selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
+      <div className="room-list">
+        {/* map through obj and render props within Room component */}
+        {rooms.map((room) => {
+          return (
+            <>
+              <Room
+                key={room.id}
+                type={room.type}
+                price={room.price}
+                available={room.available}
+              />
+            </>
+          )
+        })}
+      </div>
+    </>
   )
 }
 
