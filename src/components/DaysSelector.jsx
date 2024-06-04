@@ -27,7 +27,7 @@ const DaysSelector = ({ selectedDay, setSelectedDay }) => {
           <option value="4">4</option>
         </select>
       </form>
-      <p>Selected Day: {selectedDay}</p>
+      {/* <p>Selected Day: {selectedDay}</p> */}
     </div>
   )
 }
